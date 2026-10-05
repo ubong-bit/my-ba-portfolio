@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-cal-sans: 'Cal Sans', 'Inter', system-ui, sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-950 text-dark-100 antialiased;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-500;
+}
+
+::selection {
+  @apply bg-primary-600 text-white;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600;
+}
+
+.glass {
+  @apply bg-dark-800/40 backdrop-blur-xl border border-dark-700/50;
+}
+
+.glass-card {
+  @apply bg-dark-800/40 backdrop-blur-xl border border-dark-700/50 rounded-2xl;
+}
+
+.glow-border {
+  box-shadow: 0 0 20px rgba(255, 107, 0, 0.15), inset 0 0 20px rgba(255, 107, 0, 0.05);
+}
+
+.section-padding {
+  @apply px-4 sm:px-6 lg:px-8 py-20 lg:py-28;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 107, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 107, 0, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+}
